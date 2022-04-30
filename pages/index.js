@@ -17,7 +17,7 @@ export default function Home() {
       if (durationType && durationValue) {
         console.log(durationType, durationValue);
         const res = await fetch(
-          `http://localhost:3000/api/convert?duration=${durationValue}&type=${durationType}`
+          `https://tick-converter.vercel.app/api/convert?duration=${durationValue}&type=${durationType}`
         );
         const json = await res.json();
         if (json.error) setError(json.error);
